@@ -57,16 +57,16 @@ export default function Links() {
       {/* links small screens */}
 
       <ul
-        className={` text-sm lg:hidden text-white flex flex-col min-w-[300px] duration-500 fixed top-0  bottom-0  pt-10 z-50 text-start border-r bg-[rgba(0,0,0,.8)] border-gray-800 ${
+        className={` text-sm lg:hidden text-white flex flex-col min-w-[180px] duration-500 fixed top-0  bottom-0  pt-10 z-50 text-start border-r bg-[rgba(0,0,0,.9)]  ${
           openMenue ? "right-0" : "-right-full"
         }`}
         ref={menuRef}
       >
         <button
-          className="absolute top-4 right-4 cursor-pointer text-red-500 text-xl"
+          className="absolute top-4 right-4 cursor-pointer text-white text-2xl"
           onClick={() => setopenMenue(false)}
         >
-          <i className="fas fa-xmark"></i>
+          x
         </button>
         {navLinks.map(({ href, label }) => (
           <li key={href} className="p-3" onClick={() => setopenMenue(false)}>

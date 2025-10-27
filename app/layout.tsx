@@ -3,6 +3,7 @@ import { Figtree } from "next/font/google";
 import "./globals.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Navbar from "./_Components/Navbar/Navbar";
+import Banner from "./_Components/Home/Banner";
 
 const figtree = Figtree({
   subsets: ["latin"],
@@ -20,8 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${figtree.className}`}>
+      <body className={`${figtree.className} `}>
         <Navbar />
+        <Banner />
         {children}
       </body>
     </html>

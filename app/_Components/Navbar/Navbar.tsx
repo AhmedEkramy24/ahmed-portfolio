@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
     <>
       <nav>
-        <div className="container mx-auto flex justify-between p-4">
+        <div className="container mx-auto flex justify-between p-3">
           <Logo />
           <Links />
         </div>
