@@ -17,7 +17,7 @@ export default function Landing() {
                 <TextType
                   text={[
                     "I'm Ahmed Ekramy",
-                    "I'm frontend devoloper",
+                    "I'm frontend developer",
                     "I'm React | Next devoloper",
                     "I can make awesome websites ✨",
                   ]}
