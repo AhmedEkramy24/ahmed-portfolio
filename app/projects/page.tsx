@@ -6,6 +6,7 @@ import Image from "next/image";
 import AnimatedContent from "../_Components/ReactBits/AnimatedContent";
 import Loading from "../loading";
 import Card from "../_Components/Card/Card";
+import { FaGithub } from "react-icons/fa";
 
 interface Project {
   id: string;
@@ -44,10 +45,30 @@ export default function Projects() {
           Some of my amazing projects ✨
         </h1>
         <AnimatedContent>
-          <div className="flex flex-wrap ">
+          <div className="flex flex-wrap items-center">
             {projects.map((item, index) => (
               <Card item={item} key={index} />
             ))}
+            <div className="w-full p-3 md:w-1/2 lg:w-1/4">
+              <a
+                href="https://github.com/AhmedEkramy24"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <div className="group relative flex flex-col items-center justify-center rounded-xl bg-linear-to-b from-gray-900 to-black p-6 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                  <div className="text-6xl text-white transition-transform duration-300 group-hover:scale-110">
+                    <FaGithub />
+                  </div>
+                  <h4 className="mt-4 text-center text-lg font-semibold text-gray-200 group-hover:text-white">
+                    Show more on my GitHub 👉
+                  </h4>
+
+                  {/* optional subtle gradient overlay */}
+                  <div className="absolute inset-0 rounded-xl bg-linear-to-t from-transparent via-transparent to-white/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+                </div>
+              </a>
+            </div>
           </div>
         </AnimatedContent>
       </div>
